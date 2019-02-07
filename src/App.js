@@ -22,7 +22,29 @@ class ScoreBoard extends Component {
       this.setState(this.state.players);
     };
 
+    handleAddEvent(evt) {
+      var player = {
+        id: id,
+        name: "",
+        score: 0
+      }
+      this.state.players.push(player);
+      this.setState(this.state.products);
+    }
+
+    handlePlayerTable(evt) {
+      var player = {
+        id: evt.target.id,
+        name: evt.target.name,
+        score: evt.target.value
+      };
+      var players = this.state.players.slice();
+      var newProducts = products.map(function(product) {
+
+      })
+    }
   };
+
   }
   render() {
     return (
