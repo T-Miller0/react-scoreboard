@@ -40,8 +40,14 @@ class ScoreBoard extends Component {
       };
       var players = this.state.players.slice();
       var newProducts = products.map(function(product) {
-
-      })
+        for (var key in product) {
+          if(key == player.name && player.id == player.id) {
+            player[key] = player.value;
+          }
+        }
+        return player;
+      });
+      this.setState({players:newPlayer})
     }
   };
 
